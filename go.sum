@@ -563,8 +563,8 @@ github.com/hashicorp/raft-boltdb v0.0.0-20220329195025-15018e9b97e0 h1:CO8dBMLH6
 github.com/hashicorp/raft-boltdb v0.0.0-20220329195025-15018e9b97e0/go.mod h1:nTakvJ4XYq45UXtn0DbwR4aU9ZdjlnIenpbs6Cd+FM0=
 github.com/hashicorp/raft-boltdb/v2 v2.2.2 h1:rlkPtOllgIcKLxVT4nutqlTH2NRFn+tO1wwZk/4Dxqw=
 github.com/hashicorp/raft-boltdb/v2 v2.2.2/go.mod h1:N8YgaZgNJLpZC+h+by7vDu5rzsRgONThTEeUS3zWbfY=
-github.com/hashicorp/raft-wal v0.4.1 h1:aU8XZ6x8R9BAIB/83Z1dTDtXvDVmv9YVYeXxd/1QBSA=
-github.com/hashicorp/raft-wal v0.4.1/go.mod h1:A6vP5o8hGOs1LHfC1Okh9xPwWDcmb6Vvuz/QyqUXlOE=
+github.com/hashicorp/raft-wal v0.4.2 h1:DV1jgqEumNfdNpOaZ9mL1Gu7Mz59epFtiE6CoqnHrlY=
+github.com/hashicorp/raft-wal v0.4.2/go.mod h1:S92ainH+6fRuWk6BtZKJ8EgcGgNTKx48Hk5dhOOY1DM=
 github.com/hashicorp/serf v0.10.1 h1:Z1H2J60yRKvfDYAOZLd2MU0ND4AH/WDz7xYHDWQsIPY=
 github.com/hashicorp/serf v0.10.1/go.mod h1:yL2t6BqATOLGc5HF7qbFkTfXoPIY0WZdWHfEvMqbG+4=
 github.com/hashicorp/vault-plugin-auth-alicloud v0.14.0 h1:O6tNk0s/arubLUbLeCyaRs5xGo9VwmbQazISY/BfPK4=

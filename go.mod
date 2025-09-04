@@ -78,7 +78,7 @@ require (
 	github.com/hashicorp/raft v1.7.3
 	github.com/hashicorp/raft-autopilot v0.1.6
 	github.com/hashicorp/raft-boltdb/v2 v2.2.2
-	github.com/hashicorp/raft-wal v0.4.1
+	github.com/hashicorp/raft-wal v0.4.2
 	github.com/hashicorp/serf v0.10.1
 	github.com/hashicorp/vault-plugin-auth-alicloud v0.14.0
 	github.com/hashicorp/vault/api v1.12.2
