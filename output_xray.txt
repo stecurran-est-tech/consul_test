@@ -1,0 +1,691 @@
+
+Vulnerable Dependencies
+┌────────────────┬──────────┬─────────────────┬───────────────────────────┬────────────┬───────────────────────────┬───────────┬──────────────────┬──────┐
+│ CVE            │ SEVERITY │ CONTEXTUAL      │ DIRECT                    │ DIRECT     │ AFFECTED                  │ AFFECTED  │ FIXED            │ TYPE │
+│                │          │ ANALYSIS        │ DEPENDENCY                │ DEPENDENCY │ COMPONENT                 │ COMPONENT │ VERSIONS         │      │
+│                │          │                 │                           │ VERSION    │ NAME                      │ VERSION   │                  │      │
+├────────────────┼──────────┼─────────────────┼───────────────────────────┼────────────┼───────────────────────────┼───────────┼──────────────────┼──────┤
+│ CVE-2023-44487 │ High     │ Missing Context │ k8s.io/api                │ v0.26.2    │ k8s.io/apimachinery       │ v0.26.2   │ [0.29.0-alpha.3] │ Go   │
+│                │          │                 │ k8s.io/apimachinery       │ v0.26.2    │                           │           │ [1.29.0-alpha.3] │      │
+│                │          │                 │ k8s.io/client-go          │ v0.26.2    │                           │           │                  │      │
+├────────────────┼──────────┼─────────────────┼───────────────────────────┼────────────┼───────────────────────────┼───────────┼──────────────────┼──────┤
+│ CVE-2024-24786 │ Medium   │ Not Covered     │ google.golang.org/protobu │ v1.28.1    │ google.golang.org/protobu │ v1.28.1   │ [1.33.0]         │ Go   │
+│                │          │                 │ f                         │            │ f                         │           │                  │      │
+└────────────────┴──────────┴─────────────────┴───────────────────────────┴────────────┴───────────────────────────┴───────────┴──────────────────┴──────┘
+
+Secrets Detection
++-------------------------+
+|  No secrets were found  |
++-------------------------+
+
+Infrastructure as Code Vulnerabilities
++--------------------------------------------------------+
+|  No Infrastructure as Code vulnerabilities were found  |
++--------------------------------------------------------+
+
+Static Application Security Testing (SAST)
+┌──────────┬───────────────────────────┬─────────────┬───────────────────────────┐
+│ SEVERITY │ FILE                      │ LINE:COLUMN │ FINDING                   │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 214:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 1316:35     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 214:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 192:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 116:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 64:48       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 432:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 1317:39     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 1317:39     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 276:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 64:48       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 254:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 311:45      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 432:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 87:48       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 192:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 116:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 142:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 1316:35     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 167:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 311:45      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 276:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 254:46      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 87:48       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 142:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config_test.go    │ 167:48      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config.go         │ 897:21      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ tlsutil/config.go         │ 897:21      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ proto/private/pbpeering/p │ 241:20      │ TLS settings are configur │
+│          │ eering.go                 │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ proto/private/pbpeering/p │ 241:20      │ TLS settings are configur │
+│          │ eering.go                 │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ internal/go-sso/oidcauth/ │ 38:35       │ TLS settings are configur │
+│          │ oidcjwt.go                │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ internal/go-sso/oidcauth/ │ 38:35       │ TLS settings are configur │
+│          │ oidcjwt.go                │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/resource/client/h │ 17:26       │ TLS settings are configur │
+│          │ elper.go                  │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/resource/client/h │ 17:26       │ TLS settings are configur │
+│          │ elper.go                  │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 230:9       │ Untrusted input may influ │
+│          │ c_test.go                 │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 230:9       │ Untrusted input may influ │
+│          │ c_test.go                 │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 120:38      │ Deserializing untrusted d │
+│          │ c_test.go                 │             │ ata without validation    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 197:9       │ Untrusted input may influ │
+│          │ c_test.go                 │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 197:9       │ Untrusted input may influ │
+│          │ c_test.go                 │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ command/connect/envoy/exe │ 120:38      │ Deserializing untrusted d │
+│          │ c_test.go                 │             │ ata without validation    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api_test.go               │ 559:25      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api/api_test.go           │ 559:25      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api/api_test.go           │ 559:25      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api/api.go                │ 554:32      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api/api.go                │ 554:32      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ api.go                    │ 554:32      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/watch_handler.go    │ 113:39      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/watch_handler.go    │ 113:39      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/util_test.go        │ 141:9       │ Untrusted input may influ │
+│          │                           │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/util_test.go        │ 141:9       │ Untrusted input may influ │
+│          │                           │             │ ence external OS command  │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/http.go             │ 1011:52     │ Untrusted input is includ │
+│          │                           │             │ ed in web page content    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/http.go             │ 1011:52     │ Untrusted input is includ │
+│          │                           │             │ ed in web page content    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/mock_Clo │ 28:73       │ TLS settings are configur │
+│          │ udConfig.go               │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/mock_Clo │ 28:73       │ TLS settings are configur │
+│          │ udConfig.go               │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config_t │ 22:25       │ TLS settings are configur │
+│          │ est.go                    │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config_t │ 22:25       │ TLS settings are configur │
+│          │ est.go                    │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config_t │ 37:25       │ TLS settings are configur │
+│          │ est.go                    │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config_t │ 37:25       │ TLS settings are configur │
+│          │ est.go                    │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config.g │ 53:28       │ TLS settings are configur │
+│          │ o                         │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/config/config.g │ 53:28       │ TLS settings are configur │
+│          │ o                         │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/bootstrap/confi │ 170:27      │ TLS settings are configur │
+│          │ g-loader/loader_test.go   │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/hcp/bootstrap/confi │ 170:27      │ TLS settings are configur │
+│          │ g-loader/loader_test.go   │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/config/builder.go   │ 2597:29     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/config/builder.go   │ 2597:29     │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/checks/grpc_test.go │ 96:94       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/checks/grpc_test.go │ 96:94       │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/agent_test.go       │ 983:23      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ High     │ agent/agent_test.go       │ 983:23      │ TLS settings are configur │
+│          │                           │             │ ed insecurely, exposing c │
+│          │                           │             │ ommunications to risks    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ command/connect/envoy/boo │ 845:7       │ Using outdated or insecur │
+│          │ tstrap_config.go          │             │ e encryption algorithm    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ command/connect/envoy/boo │ 845:7       │ Using outdated or insecur │
+│          │ tstrap_config.go          │             │ e encryption algorithm    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ agent/structs/structs.go  │ 2296:12     │ Using outdated or insecur │
+│          │                           │             │ e encryption algorithm    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ agent/structs/structs.go  │ 2296:12     │ Using outdated or insecur │
+│          │                           │             │ e encryption algorithm    │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ agent/connect/generate.go │ 48:13       │ Cryptographic keys are to │
+│          │                           │             │ o short, making them easi │
+│          │                           │             │ er to break               │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Medium   │ agent/connect/generate.go │ 48:13       │ Cryptographic keys are to │
+│          │                           │             │ o short, making them easi │
+│          │                           │             │ er to break               │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ ui/packages/consul-ui/app │ 20:27       │ Detected usage of communi │
+│          │ /utils/process-ip-address │             │ cation methods lacking en │
+│          │ .js                       │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ ui/packages/consul-ui/app │ 20:27       │ Detected usage of communi │
+│          │ /utils/process-ip-address │             │ cation methods lacking en │
+│          │ .js                       │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ troubleshoot/proxy/utils. │ 19:9        │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ troubleshoot/proxy/utils. │ 19:9        │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ proxy/utils.go            │ 19:9        │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ packages/consul-ui/app/ut │ 20:27       │ Detected usage of communi │
+│          │ ils/process-ip-address.js │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 101:13      │ Detected usage of communi │
+│          │ oidc_test.go              │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 101:13      │ Detected usage of communi │
+│          │ oidc_test.go              │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 160:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 183:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 55:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 33:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 44:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 33:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 269:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 160:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 136:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 220:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 269:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 194:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 44:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 172:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 100:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 172:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 124:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 220:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 88:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 148:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 136:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 100:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 88:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 290:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 236:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 389:35      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 112:35      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 236:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 194:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 124:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 205:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 183:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 252:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 252:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 66:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 55:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 112:35      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 205:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 312:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 389:35      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 290:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 148:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 66:34       │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ internal/go-sso/oidcauth/ │ 312:34      │ Detected usage of communi │
+│          │ config_test.go            │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/resource/client/h │ 46:14       │ Detected usage of communi │
+│          │ elper.go                  │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/resource/client/h │ 46:14       │ Detected usage of communi │
+│          │ elper.go                  │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/proxy/pro │ 155:28      │ Detected usage of communi │
+│          │ xy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/proxy/pro │ 155:28      │ Detected usage of communi │
+│          │ xy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/envoy/env │ 925:4       │ Detected usage of communi │
+│          │ oy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/envoy/env │ 925:4       │ Detected usage of communi │
+│          │ oy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/envoy/env │ 873:14      │ Detected usage of communi │
+│          │ oy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ command/connect/envoy/env │ 873:14      │ Detected usage of communi │
+│          │ oy.go                     │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ app/utils/process-ip-addr │ 20:27       │ Detected usage of communi │
+│          │ ess.js                    │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/structs/service_def │ 25:44       │ Detected usage of communi │
+│          │ inition_test.go           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/structs/service_def │ 25:44       │ Detected usage of communi │
+│          │ inition_test.go           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/structs/service_def │ 47:14       │ Detected usage of communi │
+│          │ inition_test.go           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/structs/service_def │ 47:14       │ Detected usage of communi │
+│          │ inition_test.go           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_test.go        │ 1934:9      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_test.go        │ 1953:9      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_test.go        │ 1953:9      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_test.go        │ 1934:9      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 190:11      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 93:11       │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 144:11      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 93:11       │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 144:11      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/http_ce_test.go     │ 190:11      │ Detected usage of communi │
+│          │                           │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/hcp/telemetry_provi │ 516:29      │ Detected usage of communi │
+│          │ der_test.go               │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/hcp/telemetry_provi │ 516:29      │ Detected usage of communi │
+│          │ der_test.go               │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/consul/authmethod/a │ 24:30       │ Detected usage of communi │
+│          │ wsauth/aws_test.go        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/consul/authmethod/a │ 43:35       │ Detected usage of communi │
+│          │ wsauth/aws_test.go        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/consul/authmethod/a │ 24:30       │ Detected usage of communi │
+│          │ wsauth/aws_test.go        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/consul/authmethod/a │ 43:35       │ Detected usage of communi │
+│          │ wsauth/aws_test.go        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/testing. │ 149:12      │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/testing. │ 178:14      │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/testing. │ 149:12      │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/testing. │ 178:14      │ Detected usage of communi │
+│          │ go                        │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/provider │ 43:2        │ Detected usage of communi │
+│          │ _vault_auth_azure.go      │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/provider │ 43:2        │ Detected usage of communi │
+│          │ _vault_auth_azure.go      │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/provider │ 42:2        │ Detected usage of communi │
+│          │ _vault_auth_azure.go      │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/connect/ca/provider │ 42:2        │ Detected usage of communi │
+│          │ _vault_auth_azure.go      │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/config/runtime_test │ 7037:44     │ Detected usage of communi │
+│          │ .go                       │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/config/runtime_test │ 7037:44     │ Detected usage of communi │
+│          │ .go                       │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/config/runtime_test │ 7027:32     │ Detected usage of communi │
+│          │ .go                       │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/config/runtime_test │ 7027:32     │ Detected usage of communi │
+│          │ .go                       │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/checks/check_test.g │ 737:21      │ Detected usage of communi │
+│          │ o                         │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+├──────────┼───────────────────────────┼─────────────┼───────────────────────────┤
+│ Low      │ agent/checks/check_test.g │ 737:21      │ Detected usage of communi │
+│          │ o                         │             │ cation methods lacking en │
+│          │                           │             │ cryption.                 │
+└──────────┴───────────────────────────┴─────────────┴───────────────────────────┘

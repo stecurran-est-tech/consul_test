@@ -1,0 +1,8 @@
+version: 1
+type: go
+resolver:
+    repo: dep-resolution
+    serverId: trial9fipmd
+deployer:
+    repo: docker-trial
+    serverId: trial9fipmd
