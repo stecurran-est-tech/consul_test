@@ -101,7 +101,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.4
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.9.1
-	github.com/prometheus/client_golang v1.14.0
+	github.com/prometheus/client_golang v1.23.1
 	github.com/rboyer/safeio v0.2.3
 	github.com/ryanuber/columnize v2.1.2+incompatible
 	github.com/shirou/gopsutil/v3 v3.22.9
@@ -124,7 +124,7 @@ require (
 	golang.org/x/time v0.12.0
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250707201910-8d1bb00bc6a7
 	google.golang.org/grpc v1.75.0
-	google.golang.org/protobuf v1.36.6
+	google.golang.org/protobuf v1.36.8
 	gotest.tools/v3 v3.4.0
 	k8s.io/api v0.26.2
 	k8s.io/apimachinery v0.26.2
@@ -216,6 +216,7 @@ require (
 	github.com/googleapis/enterprise-certificate-proxy v0.3.2 // indirect
 	github.com/googleapis/gax-go/v2 v2.13.0 // indirect
 	github.com/gophercloud/gophercloud v0.3.0 // indirect
+	github.com/grafana/regexp v0.0.0-20240518133315-a468a5bfb3bc // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-discover/provider/gce v0.0.0-20241120163552-5eb1507d16b4 // indirect
@@ -240,7 +241,6 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
-	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/go-ps v1.0.0 // indirect
@@ -257,9 +257,9 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/posener/complete v1.2.3 // indirect
 	github.com/power-devops/perfstat v0.0.0-20220216144756-c35f1ee13d7c // indirect
-	github.com/prometheus/client_model v0.6.1 // indirect
-	github.com/prometheus/common v0.39.0 // indirect
-	github.com/prometheus/procfs v0.8.0 // indirect
+	github.com/prometheus/client_model v0.6.2 // indirect
+	github.com/prometheus/common v0.66.0 // indirect
+	github.com/prometheus/procfs v0.16.1 // indirect
 	github.com/renier/xmlrpc v0.0.0-20170708154548-ce4a1a486c03 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/ryanuber/go-glob v1.0.0 // indirect
